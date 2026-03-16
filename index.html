@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => startCountdown(endDate));
             </div>
             <div class="music">
                 <p>Атмосферная музыка для вас</p>
-                <audio id="myaudio" controls loop style="width: 500px; height: 200px" ><source src="audio/1.mp3" type="">
+                <audio webkit-playsinline id="myaudio" controls loop style="width: 500px; height: 200px" ><source src="audio/1.mp3" type="">
                 </audio>
                 <script>
                     var audio = document.getElementById("myaudio");audio.volume = 0.2;
