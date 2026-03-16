@@ -7,7 +7,7 @@
 </style>
 <link rel="icon" href="img/favic.png" type="image/png">
     <meta charset="UTF-8">
-    <title>Приглашени на свадьбу</title>
+    <title>Приглашение на свадьбу</title>
 </head>
 <body>
 <style>
@@ -58,7 +58,7 @@
     }
     img{position: relative;}
     .music{text-align: center;}
-    audio{margin-bottom: 150px; filter:saturate(20) hue-rotate(290deg)}
+    audio{filter:saturate(20) hue-rotate(290deg)}
     /*карты*/
     .map{position: relative;
     }
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => startCountdown(endDate));
             </div>
             <div class="music">
                 <p>Атмосферная музыка для вас</p>
-                <audio id="myaudio" controls loop><source src="audio/1.mp3" type="">
+                <audio id="myaudio" controls loop style="width: 500px; height: 200px" ><source src="audio/1.mp3" type="">
                 </audio>
                 <script>
                     var audio = document.getElementById("myaudio");audio.volume = 0.2;
