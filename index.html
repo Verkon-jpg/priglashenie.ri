@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Imperial+Script&display=swap');
+</style>
+<link rel="icon" href="img/favic.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Приглашени на свадьбу</title>
+</head>
+<body>
+<style>
+    html{position: relative;
+    }
+    body{position: relative;
+        background-image: url("img/фон.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-y;
+        background-color: #c6e7d1;
+    }
+    p{font-family: "Great Vibes", cursive;
+        text-align: center;
+        color:#191970;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        font-size: 50px;
+    }
+    h1{font-family: "Great Vibes", cursive;
+        font-weight: 100;
+        color:#50c878; 
+        text-align: center;
+        font-size: 90px; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+        line-height: 100px;
+    }
+    h2{font-family: "Great Vibes", cursive;
+        font-weight: 100;
+        text-align: center;
+        font-size: 80px; color:#50c878;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+    h3{font-family: "Great Vibes", cursive;
+        font-weight: 100;
+        text-align: center;
+        font-size: 80px; color:#c70a0a;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        line-height: 1em;
+    }
+    .conteiner{position: relative;}
+    .image1{position: absolute;top: 0;width: 1024px;}
+    .image2{position: absolute;top: 1335px;width: 1024px;}
+    .image3{position: absolute;top: 1392px;width: 1024px;}
+    .telo{
+        position: relative; 
+        padding-top: 1680px;
+        text-align: center;        
+    }
+    img{position: relative;}
+    .music{text-align: center;}
+    audio{padding-bottom: 150px; filter:saturate(20) hue-rotate(290deg)}
+    /*карты*/
+    .map{position: relative;
+    }
+    .left{width: 50%;float: left;}
+    .right{width: 50%;float: right;}
+    .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+        }
+
+    .time-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+    .time-block span:first-child {
+        font-size: 110px;
+        color: rgb(255, 113, 31);
+        padding: 15px;
+        border-radius: 5px;
+        min-width: 70px;
+        text-align: center;
+        font-family:  "Imperial Script", cursive;
+        }
+
+    .time-caption {
+        margin-top: 5px;
+        font-size: 28px;
+        color: #150b50;
+        font-family:  "Great Vibes", cursive;
+        }
+    .conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+.knopka{
+font-family: "Great Vibes", cursive;
+font-size: 50px;
+color: #0d3153;
+background-color: #50c878;
+padding: 40px 60px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+background: radial-gradient(circle farthest-corner at top center, #77eca8 16%, #207744 100%);
+text-decoration: none;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 2); 
+transition: transform 0.3s ease;
+transform: scale(1.2);
+}
+
+
+    
+
+
+</style>
+<script>
+    function startCountdown(endDate) {
+const daysElement = document.getElementById('days');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+
+function updateTimer() {
+const now = new Date().getTime();
+const distance = endDate - now;
+
+if (distance < 0) {
+daysElement.textContent = '00';
+hoursElement.textContent = '00';
+minutesElement.textContent = '00';
+secondsElement.textContent = '00';
+
+// Действия по истечении таймера
+document.querySelector('.countdown-timer').insertAdjacentHTML(
+'afterend', 
+'<div class="timer-ended">Время истекло!</div>'
+);
+
+clearInterval(timerInterval);
+return;
+}
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+daysElement.textContent = days < 10 ? '0' + days : days;
+hoursElement.textContent = hours < 10 ? '0' + hours : hours;
+minutesElement.textContent = minutes < 10 ? '0' + minutes : minutes;
+secondsElement.textContent = seconds < 10 ? '0' + seconds : seconds;
+}
+
+// Обновляем таймер каждую секунду
+updateTimer(); // Первичное обновление
+const timerInterval = setInterval(updateTimer, 1000);
+}
+
+// Устанавливаем дату окончания (год, месяц (0-11), день, час, минута)
+const endDate = new Date(2026, 5, 26, 0, 0, 0).getTime();
+document.addEventListener('DOMContentLoaded', () => startCountdown(endDate));
+
+</script>
+    <div class="sait">
+        <div class="conteiner">
+            <img src="img/Итог.jpg" class="image1" />
+            <img src="img/фон1.png" class="image3" />
+            <img src="img/листья.png" class="image2"/>
+        </div>
+        <div class="telo">
+            <div class="text"> 
+                <h1>Наши любимые,<br> родные и близкие!</h1>
+                <p>С радостью и волнением приглашаем вас<br> стать созерцателями и соучастниками<br> на значимом событии - создании нашей семьи. <br>
+                Нам очень важно, чтобы дорогие нашим сердцам люди<br> были рядом в такой замечательный день. <br>Будем с нетерпением ждать ваших бесценных<br> пожеланий и мудрых напутствий. <br> Искренне обнимаем и ждём встречи!
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+            </div>
+            <div class="music">
+                <p>Атмосферная музыка для вас</p>
+                <audio id="myaudio" controls loop><source src="audio/1.mp3" type="">
+                </audio>
+                <script>
+                    var audio = document.getElementById("myaudio");audio.volume = 0.2;
+                </script>
+                <br>
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+            </div>
+                <h2>Ураа!!! Мы женимся!</h2>
+                <img class="uzor" src="img/фото.png" alt=""> 
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+                <br>
+                <img src="img/план1.png" alt="" width="1000px" height="1000px">
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+
+                
+                <p>Церемония бракосочетания состоится в <br>Центральном доме культуры Кичменгского Городка <br>в 14:00 по адресу: ул. Центральная,8. </p>
+                <img src="img/дом.jfif" alt="" width="900px" height="600px" style="padding-left: 50px;">
+                <p>Праздничный банкет начнется в 17:00 в кафе "Сова"<br> по адресу: ул. Советская, 96Б</p>
+                <img src="img/сова.jfif" alt="" width="900px" height="600px" style="padding-left: 50px;">
+                <img class="uzor" src="img/узор.png" alt="">
+                <br>
+                <br>
+                <h2>Как добраться</h2>
+                <p>Надеемся, что вы легко найдете место<br> и порадуете своим присутствием!</p>
+                <br>
+                    <div class="map">
+                        <div class="left" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/rayonny_dom_kultury/62300140492/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:0px;position:absolute;top:0px;">Районный дом культуры</a><a href="https://yandex.ru/maps/10853/vologda-oblast/category/house_of_culture/184105876/?utm_medium=mapframe&utm_source=maps" style=" color:#eee;font-size:0px;position:absolute;top:14px;">Дом культуры в Вологодской области</a><iframe src="https://yandex.ru/map-widget/v1/?ll=45.802626%2C59.992326&mode=search&oid=62300140492&ol=biz&source=serp_navig&z=17.57" width="1000" height="500" frameborder="1" allowfullscreen="true"></iframe>
+                        </div>
+                        <div class="right" style="position:relative;    overflow:hidden;">
+                        <a href="https://yandex.ru/maps/org/sova/225905480857/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">СоВа</a><a href="https://yandex.ru/maps/10853/vologda-oblast/category/cafe/184106390/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Кафе в Вологодской области</a><iframe src="https://yandex.ru/map-widget/v1/org/sova/225905480857/?ll=45.815418%2C59.998684&z=17" width="1000" height="500" frameborder="1" allowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+                <br>
+                <h1>Dress-Code</h1>
+                <p>Мы очень ждём и готовимся к нашему       незабываемому дню! <br>Поддержите нас Вашими улыбками и объятиями,<br> а также красивыми нарядами в палитре мероприятия. <br>
+                Нам будет очень приятно, если ваш наряд будет<br> соответствовать цветовой гамме нашей свадьбы:</p>
+                <img src="img/дресскод.png" alt="">
+                <h1>Примеры образов</h1>
+                <img src="img/пример.png" alt="" width="1000px">
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+                <br>
+                <h1>Пожелания и забота</h1>
+                <p> Дорогие друзья и близкие,<br> ваше присутствие в этот особенный день — лучший подарок для нас. <br> Если же Вы хотите порадовать нас дополнительно,<br> будем очень признательны за денежный подарок в конверте,<br> который поможет реализовать наши совместные мечты и планы.</p>
+                <p>От всего сердца просим вас воздержаться <br>от криков "Горько!" и сохранить <br>атмосферу уютного семейного таинства.</p>
+                <br>
+                <img class="uzor" src="img/узор.png" alt="">
+                <br>
+                <h1>До свадьбы осталось:</h1>
+                <div class="taimer">
+                    <div class="countdown-timer">
+                        <div class="time-block">
+                        <span id="days">00</span>
+                        <span class="time-caption">Дней</span>
+                        </div>
+                        <div class="time-block">
+                        <span id="hours">00</span>
+                        <span class="time-caption">Часов</span>
+                        </div>
+                        <div class="time-block">
+                        <span id="minutes">00</span>
+                        <span class="time-caption">Минут</span>
+                        </div>
+                        <div class="time-block">
+                        <span id="seconds">00</span>
+                        <span class="time-caption">Секунд</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="uzor" src="img/узор.png" alt="">
+                <h1>Анкета гостя</h1>
+                <p>Чтобы сделать празднование более комфортным,<br> пожалуйста, заполните анкету и подтвердите своё присутствие<br> до 15 мая 2026г.</p>
+                <p>Заранее благодарим.</p>
+                <p>Будем счастливы видеть Вас на нашем празднике!</p>
+                <br>
+                <a href="https://forms.yandex.ru/u/69b6ac6ceb614678915eb879" class="knopka">Перейти к анкете</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Спасибо за внимание!!!</h1>
+                <img src="img/узор.png" alt="">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
