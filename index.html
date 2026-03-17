@@ -21,9 +21,7 @@
         background-position: center;
         background-repeat: repeat-y;
         background-color: #c6e7d1;
-        width: 1024px;
-        display: flex;
-        justify-content: center;
+
     }
     p{font-family: "Great Vibes", cursive;
         width: 100%;
@@ -52,15 +50,11 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
         line-height: 1em;
     }
-    .conteiner{position: relative;width: 100%; padding-top: 1680px}
-    .image1{position: absolute;top: 0;width: 1024px;}
-    .image2{position: absolute;top: 1335px;width: 1024px;}
-    .image3{position: absolute;top: 1392px;width: 1024px;}
-    .telo{width: 1024px;
-        position: relative; 
+    .telo{position: relative; 
         text-align: center;        
     }
     img{position: relative;}
+    
     /*карты*/
     .map{position: relative;width: 100%;}
     .left{width: 50%;float: left;}
@@ -85,6 +79,7 @@
         text-align: center;
         font-family:  "Imperial Script", cursive;
         }
+        .image{position: relative;}
 
     .time-caption {
         margin-top: 5px;
@@ -109,11 +104,6 @@ transition: transform 0.3s ease;
 transform: scale(1.2);
 }
     .sait{position: relative;width: 100%;}
-
-
-    
-
-
 </style>
 <script>
     function startCountdown(endDate) {
@@ -165,18 +155,13 @@ document.addEventListener('DOMContentLoaded', () => startCountdown(endDate));
 </script>
     <div class="sait">
         <div class="telo">
-            <div class="conteiner">
-                <img src="img/Итог.jpg" class="image1" />
-                <img src="img/фон1.png" class="image3" />
-                <img src="img/листья.png" class="image2"/>
-            </div>
-            <div class="text"> 
-                <h1>Наши любимые,<br> родные и близкие!</h1>
+                <img src="img/Превью.png" class="image1" />
+                <div class="text"> 
                 <p>С радостью и волнением приглашаем вас<br> стать созерцателями и соучастниками<br> на значимом событии - создании нашей семьи. <br>
                 Нам очень важно, чтобы дорогие нашим сердцам люди<br> были рядом в такой замечательный день. <br>Будем с нетерпением ждать ваших бесценных<br> пожеланий и мудрых напутствий. <br> Искренне обнимаем и ждём встречи!
                 <br>
                 <img class="uzor" src="img/узор.png" alt="">
-            </div>
+                </div>
                 <h2>Ураа!!! Мы женимся!</h2>
                 <img class="uzor" src="img/фото.png" alt=""> 
                 <br>
